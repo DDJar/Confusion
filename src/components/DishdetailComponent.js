@@ -3,25 +3,15 @@ import { Card, CardBody, CardImg, CardTitle, CardText } from "reactstrap";
 
 
 export default class Dishestail extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            SelectCommets: null
-        };
-    }
-    onDishComments(comments) {
-        this.setState({ SelectCommets: comments })
 
-    }
+
     renderComments(comments) {
         return (
             <div className="col-12 col-md-4 m-1">
                 <h1>Comments</h1>
                 {comments.map((commentIndex) => {
                     return (
-                        <div key={commentIndex.id}>
-
-
+                        <div >
                             <div>
                                 <p>{commentIndex.comment}</p>
                                 <p>-- {commentIndex.author},
@@ -38,10 +28,8 @@ export default class Dishestail extends Component {
         );
     }
     renderDish(dish) {
-        // this.onDishComment(dish.comments);
-
         return (
-            <div key={dish.id} className="col-12 col-md-4 m-1">
+            <div className="col-12 col-md-4 m-1">
                 <Card>
                     <CardImg
                         width="100%"
@@ -69,7 +57,6 @@ export default class Dishestail extends Component {
 
 
     }
-
 
     render() {
 
