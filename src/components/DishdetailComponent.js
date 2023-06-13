@@ -5,30 +5,23 @@ import { Card, CardBody, CardImg, CardTitle, CardText } from "reactstrap";
 export default class Dishestail extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            SelectCommets: null
-        };
     }
-    onDishComments(comments) {
-        this.setState({ SelectCommets: comments })
 
-    }
     renderComments(comments) {
         return (
             <div className="col-12 col-md-4 m-1">
                 <h1>Comments</h1>
-                {comments.map((commentIndex) => {
+                {comments.map((comment) => {
                     return (
-                        <div key={commentIndex.id}>
+                        <div key={comment.id}>
 
 
                             <div>
-                                <p>{commentIndex.comment}</p>
-                                <p>-- {commentIndex.author},
+                                <p>{comment.comment}</p>
+                                <p>-- {comment.author},
                                     &nbsp;
-                                    {new Intl.DateTimeFormat('en-US', {
-                                        year: "numeric", month: 'long', day: '2-digit'
-                                    }).format(new Date(commentIndex.date))}
+                                    {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'})
+                                    .format(new Date(Date.parse(comment.date)))}
                                 </p>
                             </div>
 
@@ -60,25 +53,22 @@ export default class Dishestail extends Component {
                         </CardText>
                     </CardBody>
                 </Card>
-
-
-
-
-
             </div>
         )
 
-
     }
-
-
     render() {
-
-        if (this.props.selectDish != null) {
+        const dish = this.props.dish;
+        if (dish != null) {
+            const dishItem = this.renderDish(dish);
+            const dishComments = this.renderComments(dish.comments);
             return (
-                <div className="row">
-                    {this.renderDish(this.props.selectDish)}
-                    {this.renderComments(this.props.selectDish.comments)}
+
+                <div className="container">
+                    <div className="row">
+                    {dishItem}
+                    {dishComments}
+                    </div>
                 </div>
             )
         }
