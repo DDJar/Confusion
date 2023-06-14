@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron } from 'reactstrap';
+import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
@@ -43,8 +43,8 @@ class Header extends Component {
                         </Collapse>
                     </div>
                 </Navbar>
-               
-                    <div className="container">
+               <div className='rounded'>
+               <div className="container">
                         <div className="row row-header">
                             <div className="col-12 col-sm-6">
                                 <h1>Ristorante con Fusion</h1>
@@ -52,6 +52,8 @@ class Header extends Component {
                             </div>
                         </div>
                     </div>
+               </div>
+                    
             </div>
 
     );
