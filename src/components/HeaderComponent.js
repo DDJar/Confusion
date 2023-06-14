@@ -43,7 +43,7 @@ class Header extends Component {
                         </Collapse>
                     </div>
                 </Navbar>
-               <div className='rounded'>
+               <div className='rounded jumbotron'>
                <div className="container">
                         <div className="row row-header">
                             <div className="col-12 col-sm-6">
