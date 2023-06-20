@@ -1,6 +1,28 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
+function RenderLeader({ leaders }) {
+    return (
+        <Media className='row container'>
+            <Media left className="col-3">
+                <Media image  src={leaders.image} />
+            </Media>
+            <Media right body className="col-7 mb-3">
+                <Media heading>
+                    {leaders.name}
+                </Media>
+                <Media body >
+                    <Media className='mb-3'>
+                        {leaders.designation}
+                    </Media>
+                    <Media>
+                        {leaders.description}
+                    </Media>
+                </Media>
+            </Media>
+        </Media>
+    );
+}
 
 function About(props) {
 
@@ -9,28 +31,7 @@ function About(props) {
             <p><RenderLeader leaders={leaders} /></p>
         );
     });
-    function RenderLeader({ leaders }) {
-        return (
-            <Media className='row'>
-                <Media left className="col-2">
-                    <Media object src={process.env.PUBLIC_URL + leaders.image} alt={leaders.name} />
-                </Media>
-                <Media right body className="col-8 mb-3">
-                    <Media heading>
-                        {leaders.name}
-                    </Media>
-                    <Media body >
-                        <Media className='mb-3'>
-                            {leaders.designation}
-                        </Media>
-                        <Media>
-                            {leaders.description}
-                        </Media>
-                    </Media>
-                </Media>
-            </Media>
-        );
-    }
+    
 
     return (
         <div className="container  content">

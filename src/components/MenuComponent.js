@@ -4,7 +4,7 @@ import {
     CardTitle, Breadcrumb, BreadcrumbItem
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
-
+/* ex31 */
 function RenderMenuItem ({dish, onClick}) {
     return (
         <Card>
@@ -29,7 +29,7 @@ const Menu = (props) => {
             </div>
         );
     });
-
+/* ex31 */
     return (
         <div className="container">
             <div className="row">

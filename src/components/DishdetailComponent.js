@@ -43,7 +43,7 @@ function RenderComments({ comments }) {
         </div>
     );
 }
-
+/* ex31 */
 const DishDetail = (props) => {
 
     if (props.dish != null) {
@@ -51,7 +51,6 @@ const DishDetail = (props) => {
             <div className="container">
                 <div className="row">
                     <Breadcrumb>
-
                         <BreadcrumbItem><Link to="/menu">Menu</Link></BreadcrumbItem>
                         <BreadcrumbItem active>{props.dish.name}</BreadcrumbItem>
                     </Breadcrumb>

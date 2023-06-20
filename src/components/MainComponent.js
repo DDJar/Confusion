@@ -24,6 +24,7 @@ class Main extends Component {
 
     };
   }
+  /* ex31 */
   render() {
     const HomePage = () => {
       return (
@@ -39,7 +40,7 @@ class Main extends Component {
           <About leaders={this.state.leaders} />
       );
   }
-
+/* ex31 */
     const DishWithId = ({ match }) => {
       const { dishId } = useParams();
       return (
