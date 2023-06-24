@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import {
-  Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Button, Modal, ModalHeader, ModalBody,
-  Form, FormGroup, Input, Label
-} from 'reactstrap';
+import {Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Button, Modal, ModalHeader, 
+  ModalBody, Form, FormGroup, Input, Label} from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
@@ -20,10 +18,10 @@ class Header extends Component {
   handleLogin(event) {
     this.toggleModal();
     alert("Username: " + this.username.value + " Password: " + this.password.value
-        + " Remember: " + this.remember.checked);
+      + " Remember: " + this.remember.checked);
     event.preventDefault();
 
-}
+  }
 
   toggleModal() {
     this.setState({
@@ -95,7 +93,7 @@ class Header extends Component {
           </ModalBody>
         </Modal>
 
-        <div className='rounded jumbotron'>
+        <div className='jumbotron'>
           <div className="container">
             <div className="row row-header">
               <div className="col-12 col-sm-6">
