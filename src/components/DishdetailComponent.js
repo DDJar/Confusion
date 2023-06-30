@@ -39,7 +39,7 @@ class CommentForm extends Component {
         return (
             <div className="container">
                 <div className="row mt-3">
-                    <div className=''>
+                    <div>
                     <Button outline onClick={this.toggleModal} >
                         <span className="fa fa-pencil fa-lg" ></span> <span class="text-dark font-weight-bold">Submit Comment</span>
                     </Button>
