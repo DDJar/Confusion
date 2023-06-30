@@ -30,9 +30,10 @@ class CommentForm extends Component {
     }
 
     handleSubmit(values) {
-        console.log("Current State is: " + JSON.stringify(values));
-        alert("Current State is: " + JSON.stringify(values));
+        // console.log("Current State is: " + JSON.stringify(values));
+        // alert("Current State is: " + JSON.stringify(values));
         this.toggleModal();
+        this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
     }
 
     render() {
@@ -127,7 +128,7 @@ function RenderDish({ dish }) {
 }
 
 
-function RenderComments({ comments }) {
+function RenderComments({ comments , addComment, dishId}) {
     return (
         <div className="col-12 col-md-10 m-2" style={{fontSize:20}}>
             <h1>Comments</h1>
@@ -146,7 +147,7 @@ function RenderComments({ comments }) {
                     </div>
                 )
             })}
-            <CommentForm />
+           <CommentForm dishId={dishId} addComment={addComment} />
         </div>
 
     );
