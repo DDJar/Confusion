@@ -39,16 +39,15 @@ class CommentForm extends Component {
         return (
             <div className="container">
                 <div className="row mt-3">
-                    <div >
+                    <div className=''>
                     <Button outline onClick={this.toggleModal} >
                         <span className="fa fa-pencil fa-lg" ></span> <span class="text-dark font-weight-bold">Submit Comment</span>
                     </Button>
                     </div>
-                    
 
                     <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                         <ModalHeader toggle={this.toggleModal}>
-                            <h4 class="text-info">Submit Comment</h4>
+                            <h4 >Submit Comment</h4>
                         </ModalHeader>
                         <ModalBody>
                             <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
@@ -81,7 +80,7 @@ class CommentForm extends Component {
                                             model=".author"
                                             show="touched"
                                             messages={{
-                                                required: 'Required',
+                                                required: 'Required\n',
                                                 minLength: 'Must be greater than 2 characters',
                                                 maxLength: 'Must be 15 characters or less'
                                             }}
@@ -118,7 +117,7 @@ function RenderDish({ dish }) {
         <div className="col-md-12 m-2">
             <Card>
                 <CardImg top src={dish.image} alt={dish.name} />
-                <CardBody>
+                <CardBody  >
                     <CardTitle>{dish.name}</CardTitle>
                     <CardText>{dish.description}</CardText>
                 </CardBody>
@@ -131,7 +130,7 @@ function RenderDish({ dish }) {
 
 function RenderComments({ comments }) {
     return (
-        <div className="col-12 col-md-8 m-2">
+        <div className="col-12 col-md-10 m-2" style={{fontSize:20}}>
             <h1>Comments</h1>
             {comments.map((comment) => {
                 return (
