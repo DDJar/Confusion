@@ -7,6 +7,7 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
+import { Loading } from './LoadingComponent';
 
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !(val) || (val.length <= len);
@@ -41,9 +42,9 @@ class CommentForm extends Component {
             <div className="container">
                 <div className="row mt-3">
                     <div>
-                    <Button outline onClick={this.toggleModal} >
-                        <span className="fa fa-pencil fa-lg" ></span> <span class="text-dark font-weight-bold">Submit Comment</span>
-                    </Button>
+                        <Button outline onClick={this.toggleModal} >
+                            <span className="fa fa-pencil fa-lg" ></span> <span class="text-dark font-weight-bold">Submit Comment</span>
+                        </Button>
                     </div>
                     <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                         <ModalHeader toggle={this.toggleModal}>
@@ -95,7 +96,7 @@ class CommentForm extends Component {
                                         <Control.textarea model=".comment" id="comment" name="comment" rows="6" className="form-control text-dark" />
                                     </Col>
                                 </Row>
-                                <Row className="form-group" style={{paddingTop:20,width:100}}>
+                                <Row className="form-group" style={{ paddingTop: 20, width: 100 }}>
                                     <Col md={8}>
                                         <Button type="submit" color="primary" >
                                             <span class="text-light">Submit</span>
@@ -128,9 +129,9 @@ function RenderDish({ dish }) {
 }
 
 
-function RenderComments({ comments , addComment, dishId}) {
+function RenderComments({ comments, addComment, dishId }) {
     return (
-        <div className="col-12 col-md-10 m-2" style={{fontSize:20}}>
+        <div className="col-12 col-md-10 m-2" style={{ fontSize: 20 }}>
             <h1>Comments</h1>
             {comments.map((comment) => {
                 return (
@@ -147,15 +148,32 @@ function RenderComments({ comments , addComment, dishId}) {
                     </div>
                 )
             })}
-           <CommentForm dishId={dishId} addComment={addComment} />
+            <CommentForm dishId={dishId} addComment={addComment} />
         </div>
 
     );
 }
 /* ex31 */
 const DishDetail = (props) => {
-
-    if (props.dish != null) {
+    if (props.isLoading) {
+		return (
+			<div className="container">
+				<div className="row">
+					<Loading />
+				</div>
+			</div>
+		);
+	}
+	else if (props.errMess) {
+		return (
+			<div className="container">
+				<div className="row">
+					<h4>{props.errMess}</h4>
+				</div>
+			</div>
+		);
+	}
+	else  if (props.dish != null) {
         return (
             <div className="container">
                 <div className="row">
@@ -173,7 +191,11 @@ const DishDetail = (props) => {
                         <RenderDish dish={props.dish} />
                     </div>
                     <div className="col-12 col-md-5 m-1">
-                        <RenderComments comments={props.comments} />
+                        <RenderComments comments={props.comments}
+                            addComment={props.addComment}
+                            dishId={props.dish.id}
+                        />
+
                     </div>
                 </div>
             </div>
