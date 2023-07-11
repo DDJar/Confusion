@@ -88,8 +88,6 @@ class Main extends Component {
             </Switch>
             </CSSTransition>
           </TransitionGroup>
-
-
         </div>
         <Footer />
       </div>
