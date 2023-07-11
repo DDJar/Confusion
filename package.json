@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.3",
     "bootstrap-social": "^5.1.1",
+    "cross-fetch": "2.1.0",
     "font-awesome": "^4.7.0",
     "popper.js": "^1.16.1",
     "react": "^16.20.0",
