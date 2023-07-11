@@ -3134,6 +3134,11 @@ case-sensitive-paths-webpack-plugin@^2.4.0:
   resolved "https://registry.npmjs.org/case-sensitive-paths-webpack-plugin/-/case-sensitive-paths-webpack-plugin-2.4.0.tgz"
   integrity sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw==
 
+chain-function@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/chain-function/-/chain-function-1.0.1.tgz#c63045e5b4b663fb86f1c6e186adaf1de402a1cc"
+  integrity sha512-SxltgMwL9uCko5/ZCLiyG2B7R9fY4pDZUw7hJ4MhirdjBLosoDqkWABi3XMucddHdLiFJMb7PD2MZifZriuMTg==
+
 chalk@^2.0.0, chalk@^2.4.1:
   version "2.4.2"
   resolved "https://registry.npmjs.org/chalk/-/chalk-2.4.2.tgz"
@@ -3849,6 +3854,13 @@ dom-converter@^0.2.0:
   integrity sha512-gd3ypIPfOMr9h5jIKq8E3sHOTCjeirnl0WK5ZdS1AW0Odt0b1PaWaHdJ4Qk4klv+YB9aJBS7mESXjFoDQPu6DA==
   dependencies:
     utila "~0.4"
+
+dom-helpers@^3.2.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-3.4.0.tgz#e9b369700f959f62ecde5a6babde4bccd9169af8"
+  integrity sha512-LnuPJ+dwqKDIyotW1VzmOZ5TONUN7CwkCR5hrgawTUbkBGYdeoNLZo6nNfGkCrjtE1nXXaj7iMMpDa8/d9WoIA==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
 
 dom-helpers@^5.0.1:
   version "5.2.1"
@@ -7728,12 +7740,12 @@ react-dev-utils@^12.0.1:
     text-table "^0.2.0"
 
 react-dom@^16.20.0:
-  version "18.3.0-next-fccf3a9fb-20230213"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.3.0-next-fccf3a9fb-20230213.tgz#dec252f0754c71e0401f7915fe4edf824513a2e5"
-  integrity sha512-bN9aYPDUOjwu7xGQ2A8f6oBuWZX4Ak0z3E8obKr0P49bC+le0MP1FjPV3vQLCln02GPahKVruMnEOJbpYFkyUg==
+  version "18.3.0-next-fecc288b7-20221025"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.3.0-next-fecc288b7-20221025.tgz#f06afce21f68a6797eb4c740637aa844c7918bcd"
+  integrity sha512-EczZNIcOXzLFyPhSXpplVFekfUvbtHRC68TVAPfCopn8YxjMg2ROVgYs1VdSnEu2JlXKvpeIbjexAuhDprsp/A==
   dependencies:
     loose-envify "^1.1.0"
-    scheduler "0.24.0-next-fccf3a9fb-20230213"
+    scheduler "0.24.0-next-fecc288b7-20221025"
 
 react-error-overlay@^6.0.11:
   version "6.0.11"
@@ -7883,6 +7895,17 @@ react-scripts@5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
+react-transition-group@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.3.0.tgz#8dd1af58f6af284b19fd057f512e74f20438ad31"
+  integrity sha512-OU3/swEL8y233u5ajTn3FIcQQ/b3XWjLXB6e2LnM1OK5JATtsyfJvPTZ8c/dawHNqjUltcdHRSpgMtPe7v07pw==
+  dependencies:
+    chain-function "^1.0.0"
+    dom-helpers "^3.2.0"
+    loose-envify "^1.3.1"
+    prop-types "^15.5.8"
+    warning "^3.0.0"
+
 react-transition-group@^4.4.2:
   version "4.4.5"
   resolved "https://registry.npmjs.org/react-transition-group/-/react-transition-group-4.4.5.tgz"
@@ -7894,9 +7917,9 @@ react-transition-group@^4.4.2:
     prop-types "^15.6.2"
 
 react@^16.20.0:
-  version "18.3.0-next-fecc288b7-20221025"
-  resolved "https://registry.yarnpkg.com/react/-/react-18.3.0-next-fecc288b7-20221025.tgz#8da77f8c8221bb2761ed817b7638feb108ba791c"
-  integrity sha512-lKvCNWRO9XPy8q7hLd0ODK/4Oqr54r3Vr49Y7EyNBz/kfsmNT6Vx0F69KRz/eGcbt1XDvtbA7KZd+mh8w3wONQ==
+  version "18.3.0-next-fccf3a9fb-20230213"
+  resolved "https://registry.yarnpkg.com/react/-/react-18.3.0-next-fccf3a9fb-20230213.tgz#b8d48cc664aceead06f8a4485a792b8af4bf7cca"
+  integrity sha512-DPWHyL/tLt70h3CW8So5ul1pnW0muvZFM3B8iwxVj+u4j4Z901wnbwE45CLMSpX8yJiSxO9ioPvkhgiuIji2uw==
   dependencies:
     loose-envify "^1.1.0"
 
@@ -8226,10 +8249,10 @@ saxes@^5.0.1:
   dependencies:
     xmlchars "^2.2.0"
 
-scheduler@0.24.0-next-fccf3a9fb-20230213:
-  version "0.24.0-next-fccf3a9fb-20230213"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.24.0-next-fccf3a9fb-20230213.tgz#4c97eb787670e68472bf7d5fedb4dd11eab10bbf"
-  integrity sha512-cLvuAY4/NDA6tNKmZ+Z7UaDBFHEMdw1h22zpTloQOEybjhfEc9vLCGZc2nbFJL7oLiVIhmB7q7dsPQXi0ca14A==
+scheduler@0.24.0-next-fecc288b7-20221025:
+  version "0.24.0-next-fecc288b7-20221025"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.24.0-next-fecc288b7-20221025.tgz#0f4b174cf0ee5866b78855f4bf41142cc3cecc0e"
+  integrity sha512-D2r7z/2EbRXXz4k8XRQab2l71zARIwmZzLLGPAM936/dW1iF835+FMwnOe4Iep96vNJAdQavqJBP4Fm+/MadsQ==
   dependencies:
     loose-envify "^1.1.0"
 
