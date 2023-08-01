@@ -262,37 +262,15 @@
   ],
   "feedback": [
     {
-      "date": "2023-07-11T08:28:45.480Z",
-      "firstname": "Viet",
-      "lastname": "Dinh",
-      "telnum": "09987",
-      "email": "ssss@hh.com",
+      "date": "2023-08-01T07:26:16.462Z",
+      "firstname": "hello",
+      "lastname": "world",
+      "telnum": "011",
+      "email": "23@gjj.com",
       "agree": true,
       "contactType": "Email",
-      "message": "122",
+      "message": "xin chao",
       "id": 1
-    },
-    {
-      "date": "2023-07-11T08:29:38.198Z",
-      "firstname": "Long",
-      "lastname": "Nguyen",
-      "telnum": "123456",
-      "email": "1209@gmail.com",
-      "agree": true,
-      "contactType": "Email",
-      "message": "1111",
-      "id": 2
-    },
-    {
-      "date": "2023-07-11T08:58:27.188Z",
-      "firstname": "Viet",
-      "lastname": "Nguye",
-      "telnum": "123434",
-      "email": "12@vnm.com",
-      "agree": true,
-      "contactType": "Email",
-      "message": "hello",
-      "id": 3
     }
   ]
 }
